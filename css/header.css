@@ -1,0 +1,58 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+    user-select: none;
+}
+
+.logo {
+    font-size: 2.5rem;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 4px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+nav>*:hover {
+    cursor: pointer;
+    color: rgb(146, 212, 54);
+}
+
+.seach-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    gap: 50px;
+    text-transform: uppercase;
+    letter-spacing: normal;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.category {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.template-input-container {
+    display: flex;
+    gap: 5px;
+}

@@ -1,0 +1,180 @@
+.canvas-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 40px 0px 20px 0px;
+    gap: 20px;
+}
+
+#text-input {
+    width: 100%;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.edit-tools {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+    padding: 20px;
+    user-select: none;
+}
+
+.font-edit-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.font-edit {
+    border: 1px solid black;
+    padding: 5px;
+    width: min-content;
+    border-radius: 5px;
+}
+
+.add-delete {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    border-radius: 5px;
+    border: 1px solid black;
+    width: min-content;
+    padding: 5px;
+}
+
+.add-delete>*,
+.font-edit>*,
+.btn {
+    height: 35px;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+
+.font-edit {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.font-change-container {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.save-share {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+#colorPicker {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+}
+
+#strokeColorPicker {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+    border-radius: 5px;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.upload-btn {
+    color: #dc590d;
+}
+
+.download-btn {
+    color: #2083DF;
+}
+
+.share-btn {
+    color: #9920DF;
+}
+
+.save-btn {
+    color: #3da52f;
+}
+
+.btn:hover,
+.add-delete>*:hover,
+.font-edit>*:hover {
+    cursor: pointer;
+    background-color: rgb(146, 212, 54);
+}
+
+.stickers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-caret-right {
+    font-size: 40px;
+}
+
+.stickers-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 5px;
+    font-size: 30px;
+    padding: 5px 15px;
+    border-radius: 10px;
+    background-color: #fbf8f8;
+    border: 1px solid black;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.sticker {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+}
+
+.sticker:hover {
+    transform: translateY(-2px)
+}
+
+
+.next-page,
+.prev-page {
+    cursor: pointer;
+}
+
+.next-page:hover,
+.prev-page:hover {
+    color: rgb(107, 107, 107);
+}

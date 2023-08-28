@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme-generator</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="onInit()">
+
+    <header>
+        <div class="logo" onclick="onGallery()">logo</div>
+        <nav>
+            <div class="gallery active" onclick="onGallery()">gallery</div>
+            <div class="memes" onclick="onMemes()">memes</div>
+            <div class="about">about</div>
+        </nav>
+    </header>
+
+    <main class="main-app">
+
+        <section class="gallery-container" style="display: block;">
+            <main>
+                <div class="seach-bar">
+                    <div class="template-input-container">Search for template:
+                        <input class="search-input" type="text" placeholder="Search" value=""
+                            oninput="onSortByInput(this.value)">
+                    </div>
+                    <div class="category">
+                        <div class="funny-text" onclick="onSortByText(this,'funny')" class="funny">funny</div>
+                        <div class="men-text" onclick="onSortByText(this,'men')" class="men">men</div>
+                        <div class="woman-text" onclick="onSortByText(this,'woman')" class="woman">woman</div>
+                        <div class="animal-text" onclick="onSortByText(this,'animal')" class="animal">animal</div>
+                        <div class="all-text active" onclick="onSortByText(this,'all')" class="all">all</div>
+                    </div>
+                </div>
+                <section class="gallery-template"></section>
+            </main>
+        </section>
+
+        <section class="editor-container" style="display: none;">
+            <section class="canvas-container">
+                <canvas id="my-canvas" style="border: 1px solid black;" width="450" height="450"></canvas>
+                <div class="edit-tools">
+                    <input type="text" name="" id="text-input" placeholder="Enter text" oninput="onInput(this.value)">
+                    <div class="add-delete">
+                        <div onclick="onLineSwitch()"><i class="fa-solid fa-arrows-up-down"></i></div>
+                        <div onclick="onAddLine()"><i class="fa-solid fa-plus"></i></div>
+                        <div onclick="onDeleteLine()"><i class="fa-solid fa-trash"></i></div>
+                    </div>
+                    <div class="font-edit-container">
+                        <div class="font-edit">
+                            <div onclick="onFontSize('+')">A+</div>
+                            <div onclick="onFontSize('-')">A-</div>
+                            <div onclick="onAlignLeft()"><i class="fa-solid fa-align-left fa-flip-vertical"></i></div>
+                            <div onclick="onAlignCenter()"><i class=" fa-solid fa-align-center fa-flip-vertical"></i>
+                            </div>
+                            <div onclick="onAlignRight()"><i class="fa-solid fa-align-right fa-flip-vertical"></i></div>
+                        </div>
+                        <div class="font-change-container">
+                            <select class="font-change" onchange="onFontFamily(this.value)">
+                                <option value="Impact">Impact</option>
+                                <option value="Arial">Arial</option>
+                                <option value="Calibri">Calibri</option>
+                            </select>
+                            <div class="stroke-color">
+                                <div onclick="onStroke()" class="btn strokeButton">
+                                    <i class="fa-solid fa-s"></i>
+                                </div>
+                                <input type="color" id="strokeColorPicker"
+                                    oninput="updateColor(this.value,'strokeColor')">
+                            </div>
+                            <div class="font-color">
+                                <div onclick="onColor()" class="btn colorButton">
+                                    <i class="fa-solid fa-palette"></i>
+                                </div>
+                                <input type="color" id="colorPicker" oninput="updateColor(this.value,'color')">
+                            </div>
+                        </div>
+                        <div class="stickers">
+                            <div class="prev-page" onclick="onChangePage(-1)"><i
+                                    class="fa-solid fa-caret-right fa-rotate-180"></i>
+                            </div>
+                            <div class="stickers-container"></div>
+                            <div class="next-page" onclick="onChangePage(1)">
+                                <i class="fa-solid fa-caret-right"></i>
+                            </div>
+                        </div>
+                        <div class="save-share">
+                            <a href="#" class="btn download-btn" onclick="downloadImg(this)" download="my-img.jpg">
+                                <i class="fa-solid fa-download"></i></a>
+                            <a href="#" class="btn save-btn" onclick="onSaveMeme()">
+                                <i class="fa-solid fa-floppy-disk"></i></a>
+                            <a href="#" class="btn share-btn" onclick="onShareImg()">
+                                <i class="fa-solid fa-share"></i></a>
+                            <label class="btn upload-btn"><i class="fa-solid fa-upload"></i>
+                                <input type="file" class="file-input btn" style="display: none" name="image"
+                                    onchange="onImgInput(event)" accept="image/*" />
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section class="memes-container" style="display: none;">
+            <div class="memes-img"></div>
+        </section>
+
+    </main>
+
+    <div class="user-msg"></div>
+    <footer>© 2023 Meme generator by David Tadevosian.</footer>
+
+    <script src="https://kit.fontawesome.com/5ca628130e.js" crossorigin="anonymous"></script>
+    <script src="js/services/utils.services.js"></script>
+    <script src="js/services/meme.service.js"></script>
+    <script src="js/services/meme.upload-from-local.service.js"></script>
+    <script src="js/services/meme.share.service.js"></script>
+    <script src="js/services/meme.save.service.js"></script>
+    <script src="js/meme-grab-handle.js"></script>
+    <script src="js/meme.controller.js"></script>
+</body>
+
+</html>

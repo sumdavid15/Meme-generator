@@ -1,0 +1,58 @@
+.gallery-template {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1300px;
+    gap: 10px;
+    margin: 20px 0px 20px 0px;
+}
+
+.gallery-template img {
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.template {
+    transition: all 0.2s ease-in;
+}
+
+.template:hover {
+    cursor: pointer;
+    transform: translateY(-6px)
+}
+
+.funny-text,
+.woman-text,
+.men-text,
+.animal-text,
+.all-text {
+    user-select: none;
+    cursor: pointer;
+}
+
+.funny-text:hover,
+.woman-text:hover,
+.men-text:hover,
+.animal-text:hover,
+.all-text:hover {
+    color: rgb(146, 212, 54)
+}
+
+.funny-text {
+    font-size: 26px;
+}
+
+.woman-text {
+    font-size: 20px;
+}
+
+.men-text {
+    font-size: 16px;
+}
+
+.animal-text {
+    font-size: 31px;
+}

@@ -1,0 +1,34 @@
+.memes-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 1300px;
+    gap: 10px;
+    margin: 20px 0px 20px 0px;
+}
+
+.memes-container img {
+    height: 300px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.memes-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0px 20px 0px;
+}
+
+.edited-meme {
+    transition: all 0.2s ease-in;
+}
+
+.edited-meme:hover {
+    cursor: pointer;
+    transform: translateY(-6px)
+}
